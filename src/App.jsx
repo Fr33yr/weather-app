@@ -1,7 +1,7 @@
 import React,{ Fragment, useState, useEffect } from 'react';
 import './styles/main.css';
 
-
+import Weather from './components/weather';
 
 
 const API_KEY = 'e01295aee6c84749a40110748222004'
@@ -56,8 +56,9 @@ function App() {
           </form>
         </div>
       </nav>
-      <div>
-        <h1>{}</h1>
+
+      <div className="wheather-container">
+        <Weather />
       </div>
     </Fragment>    
   );

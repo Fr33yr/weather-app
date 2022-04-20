@@ -32,4 +32,26 @@ nav {
   border: 1px solid black;
   font-size: 1.2em;
   color: black;
+}
+
+.weather {
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.temp {
+  padding-right: 1em;
+}
+
+.line {
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+div p {
+  padding-left: 1em;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=main.css.map */
