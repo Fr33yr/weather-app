@@ -1,4 +1,4 @@
-import React,{ Fragment, useState, useEffect } from 'react';
+import React,{ Fragment, useState } from 'react';
 import './styles/main.css';
 
 import Weather from './components/weather';
@@ -12,6 +12,7 @@ const API_KEY = 'e01295aee6c84749a40110748222004'
 function App() {
 
   const [datos, setDatos] = useState([])
+  const [location, setLocation] = useState('')
   const [searchLocation, setSearchLocation] = useState('')
 
   const API_SEARCH = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=3&aqi=no&alerts=no`
@@ -23,6 +24,7 @@ function App() {
     fetch(API_SEARCH)
       .then(res => res.json())
       .then((res) => {
+        setLocation(res.location)
         setDatos(res.forecast.forecastday)
       })
       .catch((err) => (
@@ -55,9 +57,9 @@ function App() {
         </div>
       </nav>
 
-      
+      <h2 className='region'>{location.country} {location.region}</h2>
 
-      <div className="wheather-container">
+      <div className="weather-container">
       {
         datos.map((dato, index)=> <Weather key={index} {...dato}/>)
       }

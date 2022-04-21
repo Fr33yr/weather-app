@@ -2,7 +2,12 @@
 
   
 body {
+  text-align: center;
   overflow-x: hidden;
+}
+
+.region{
+  padding-top: 5vh;
 }
 
 //===Navbar===
@@ -36,10 +41,11 @@ nav{
 //===Weather component===
 
 .weather{
+  position: inherit;
+  width: 320px;
+  margin: 0 auto;
   padding-top: 10vh;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .temp{
@@ -58,5 +64,15 @@ div{
   p{
     padding-left: 1em;
     font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .weather-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .temp{
+    margin-right: .5em;
   }
 }
