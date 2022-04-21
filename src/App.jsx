@@ -11,10 +11,10 @@ const API_KEY = 'e01295aee6c84749a40110748222004'
 
 function App() {
 
-  const [datos, setDatos] = useState({})
-  const [searchLocation, setSearchLocation] = useState('')
+  const [datos, setDatos] = useState([])
+  const [searchLocation, setSearchLocation] = useState('London')
 
-  const API_SEARCH = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${searchLocation}`
+  const API_SEARCH = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=3&aqi=no&alerts=no`
 
 
   const handleOnSubmit = (event) => {
@@ -23,8 +23,10 @@ function App() {
     fetch(API_SEARCH)
       .then(res => res.json())
       .then((res) => {
-        setDatos(res)
-        console.log(res)
+        const days = res.forecast.forecastday.map((item)=> 
+          item.day
+        )
+        setDatos(days)
       })
       .catch((err) => (
         console.log(err)
@@ -34,7 +36,6 @@ function App() {
   const handleOnChange = (event) => {
     setSearchLocation(event.target.value)
   }
-
 
 
   return (
@@ -51,14 +52,18 @@ function App() {
               required
             />
             <button type="submit" className='search-btn'>
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
         </div>
       </nav>
 
+      
+
       <div className="wheather-container">
-        <Weather />
+      {
+        datos.map((dato, index)=> <Weather key={index} {...dato}/>)
+      }
       </div>
     </Fragment>    
   );
