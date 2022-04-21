@@ -12,7 +12,7 @@ const API_KEY = 'e01295aee6c84749a40110748222004'
 function App() {
 
   const [datos, setDatos] = useState([])
-  const [searchLocation, setSearchLocation] = useState('London')
+  const [searchLocation, setSearchLocation] = useState('')
 
   const API_SEARCH = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=3&aqi=no&alerts=no`
 
