@@ -71,4 +71,10 @@ div p {
   .temp {
     margin-right: 0.5em;
   }
+}
+footer {
+  min-height: 15vh;
+  margin-top: 10vh;
+  padding-top: 3vh;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
