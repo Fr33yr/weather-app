@@ -1,7 +1,12 @@
 import React,{ Fragment } from "react";
 
-function Weather({ day }){
+function Weather({ day, date }){
 
+    const setDate = (d) => {
+        let date = new Date(d).toString()
+
+        return `${date.slice(0,3)} ${date.slice(8,10)}`
+    }
 
     return(
         <Fragment>
@@ -14,6 +19,7 @@ function Weather({ day }){
                 </div>
                 <div className="line"></div>
                 <div>
+                    <h3 className="date">{setDate(date)}</h3>
                     <p>viento: {day.maxwind_kph} km/h</p>
                     <p>Lluvia: {day.daily_chance_of_rain}%</p>
                     <p>Precipitaciones: {day.totalprecip_mm}</p>

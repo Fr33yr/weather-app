@@ -4,20 +4,24 @@
 body {
   text-align: center;
   overflow-x: hidden;
+  background-color: $Cadet-Blue;
 }
 
 .region{
+  font-size: 2rem;
   padding-top: 5vh;
 }
 
 //===Navbar===
 
 nav{
+  min-height: 10vh;
   width: 100%;
-  background: gray;
+  background: lightcyan;
 }
 
 .search-container{
+  padding-top: 1.2rem;
   margin-left: 2em;
 }
 
@@ -39,6 +43,10 @@ nav{
 }
 
 //===Weather component===
+
+.weather-container{
+  min-height: 70vh;
+}
 
 .weather{
   position: inherit;
@@ -68,9 +76,16 @@ div{
 }
 
 @media (min-width: 980px) {
+  .region{
+    padding-top: 10vh;
+  }
   .weather-container{
+    margin-top: 10vh;
     display: flex;
     flex-direction: row;
+  }
+  .line{
+    max-height: 180px;
   }
   .temp{
     margin-right: .5em;
@@ -80,8 +95,10 @@ div{
 //===Footer===
 
 footer{
-  min-height: 15vh;
+  position: inherit;
+  min-height: 30vh;
   margin-top: 10vh;
-  padding-top: 3vh;
+  padding-top: 13vh;
   justify-content: center;
+  background-color: lightcyan;
 }
