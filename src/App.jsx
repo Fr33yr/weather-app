@@ -23,10 +23,7 @@ function App() {
     fetch(API_SEARCH)
       .then(res => res.json())
       .then((res) => {
-        const days = res.forecast.forecastday.map((item)=> 
-          item.day
-        )
-        setDatos(days)
+        setDatos(res.forecast.forecastday)
       })
       .catch((err) => (
         console.log(err)
