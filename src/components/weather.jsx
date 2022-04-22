@@ -20,9 +20,9 @@ function Weather({ day, date }){
                 <div className="line"></div>
                 <div>
                     <h3 className="date">{setDate(date)}</h3>
-                    <p>viento: {day.maxwind_kph} km/h</p>
-                    <p>Lluvia: {day.daily_chance_of_rain}%</p>
-                    <p>Precipitaciones: {day.totalprecip_mm}</p>
+                    <p>Wind: {day.maxwind_kph} km/h</p>
+                    <p>Rain: {day.daily_chance_of_rain}%</p>
+                    <p>Precip: {day.totalprecip_mm}</p>
                 </div>
             </div>
         </Fragment>

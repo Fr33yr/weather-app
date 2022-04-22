@@ -5,9 +5,6 @@ import Weather from './components/weather';
 
 
 const API_KEY = 'e01295aee6c84749a40110748222004'
-//const API_URL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${searchLocation}`
-//Api forecast url
-//const FC_URL = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=London&days=3&aqi=no&alerts=no`
 
 function App() {
 

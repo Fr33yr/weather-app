@@ -7,7 +7,7 @@
 body {
   text-align: center;
   overflow-x: hidden;
-  background-color: #639FAB;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(21, 86, 204) 56%);
 }
 
 .region {
@@ -18,7 +18,8 @@ body {
 nav {
   min-height: 10vh;
   width: 100%;
-  background: lightcyan;
+  box-shadow: 0 0 5px 0;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 56%);
 }
 
 .search-container {
@@ -49,20 +50,24 @@ nav {
 
 .weather {
   position: inherit;
-  width: 320px;
+  width: 330px;
+  height: 180px;
   margin: 0 auto;
-  padding-top: 10vh;
+  margin-top: 10vh;
   display: flex;
 }
 
 .temp {
+  max-width: 140px;
   padding-right: 1em;
 }
 
 .line {
+  margin-top: 0.5em;
   padding: 1.5rem 0;
   border-radius: 10px;
   border: 1px solid black;
+  max-height: 160px;
 }
 
 div p {
@@ -81,10 +86,6 @@ div p {
     flex-direction: row;
   }
 
-  .line {
-    max-height: 180px;
-  }
-
   .temp {
     margin-right: 0.5em;
   }
@@ -95,5 +96,5 @@ footer {
   margin-top: 10vh;
   padding-top: 13vh;
   justify-content: center;
-  background-color: lightcyan;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 56%);
 }/*# sourceMappingURL=main.css.map */
