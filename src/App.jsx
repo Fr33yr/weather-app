@@ -12,7 +12,7 @@ function App() {
   const [location, setLocation] = useState('')
   const [searchLocation, setSearchLocation] = useState('')
 
-  const API_SEARCH = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=3&aqi=no&alerts=no`
+  const API_SEARCH = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=3&aqi=no&alerts=no`
 
 
   const handleOnSubmit = (event) => {
