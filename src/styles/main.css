@@ -54,17 +54,18 @@ nav {
 .weather {
   position: inherit;
   border-radius: 10px;
-  width: 330px;
-  height: 180px;
+  width: 340px;
+  height: 190px;
   margin: 0 auto;
   margin-top: 10vh;
+  padding: 0.8em 0 0 0.5em;
   display: flex;
   background: rgba(169, 169, 169, 0.2117647059);
 }
 
 .temp {
   max-width: 140px;
-  padding-right: 1em;
+  margin-right: 1em;
 }
 .temp h2 {
   padding-bottom: 0.3em;
