@@ -1,4 +1,5 @@
 * {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -65,6 +66,9 @@ nav {
   max-width: 140px;
   padding-right: 1em;
 }
+.temp h2 {
+  padding-bottom: 0.3em;
+}
 
 .line {
   margin-top: 0.5em;
@@ -74,6 +78,10 @@ nav {
   max-height: 160px;
 }
 
+div h3 {
+  font-size: 1.4rem;
+  padding: 0.8em 0;
+}
 div p {
   padding-left: 1em;
   font-size: 1.2rem;

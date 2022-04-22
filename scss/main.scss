@@ -65,6 +65,9 @@ nav{
 .temp{
   max-width: 140px;
   padding-right: 1em;
+  h2{
+    padding-bottom: .3em;
+  }
 }
 
 
@@ -78,7 +81,12 @@ nav{
 
 
 div{
+  h3{
+    font-size: 1.4rem;
+    padding: .8em 0;
+  }
   p{
+    
     padding-left: 1em;
     font-size: 1.2rem;
   }
